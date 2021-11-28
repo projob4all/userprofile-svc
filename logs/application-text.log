@@ -1,0 +1,37 @@
+[INFO ] 2021-11-26 23:10:08.987 [main]  c.j.p.UserprofileApplication - Starting UserprofileApplication using Java 11.0.9 on Sergiys-MBP.MG8702 with PID 40115 (/Users/vs/Projects/job4all/profile-svc-git/profile-svc/userprofile-svc/build/classes/java/main started by vs in /Users/vs/Projects/job4all/profile-svc-git/profile-svc/userprofile-svc)
+[INFO ] 2021-11-26 23:10:08.996 [main]  c.j.p.UserprofileApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2021-11-26 23:10:10.088 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2021-11-26 23:10:10.137 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
+[INFO ] 2021-11-26 23:10:10.633 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2021-11-26 23:10:10.643 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2021-11-26 23:10:10.643 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+[INFO ] 2021-11-26 23:10:10.730 [main]  o.a.c.c.C.[.[.[/profile/api/latest] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-11-26 23:10:10.731 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1695 ms
+[INFO ] 2021-11-26 23:10:10.916 [main]  o.f.c.i.l.VersionPrinter - Flyway Community Edition 7.7.3 by Redgate
+[INFO ] 2021-11-26 23:10:11.000 [main]  o.f.c.i.d.b.DatabaseType - Database: jdbc:postgresql://localhost:5432/j4a (PostgreSQL 14.0)
+[WARN ] 2021-11-26 23:10:11.004 [main]  o.f.c.i.d.b.Database - Flyway upgrade recommended: org.flywaydb.core.internal.database.postgresql.PostgreSQLDatabaseType@448086ab 14.0 is newer than this version of Flyway and support has not been tested. The latest supported version of org.flywaydb.core.internal.database.postgresql.PostgreSQLDatabaseType@448086ab is 13.
+[INFO ] 2021-11-26 23:10:11.038 [main]  o.f.c.i.c.DbValidate - Successfully validated 1 migration (execution time 00:00.021s)
+[INFO ] 2021-11-26 23:10:11.042 [main]  o.f.c.i.c.DbMigrate - Current version of schema "public": 210311
+[INFO ] 2021-11-26 23:10:11.043 [main]  o.f.c.i.c.DbMigrate - Schema "public" is up to date. No migration necessary.
+[INFO ] 2021-11-26 23:10:11.101 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2021-11-26 23:10:11.146 [main]  o.h.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+[INFO ] 2021-11-26 23:10:11.264 [main]  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2021-11-26 23:10:11.352 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2021-11-26 23:10:11.366 [main]  c.z.h.p.PoolBase - HikariPool-1 - Driver does not support get/set network timeout for connections. (Method org.postgresql.jdbc42.Jdbc42Connection.getNetworkTimeout() is not yet implemented.)
+[INFO ] 2021-11-26 23:10:11.370 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2021-11-26 23:10:11.389 [main]  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+[INFO ] 2021-11-26 23:10:12.107 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2021-11-26 23:10:12.116 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2021-11-26 23:10:12.570 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2021-11-26 23:10:12.732 [main]  o.s.b.a.e.w.EndpointLinksResolver - Exposing 15 endpoint(s) beneath base path '/actuator'
+[INFO ] 2021-11-26 23:10:12.789 [main]  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/openapi.json] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[WARN ] 2021-11-26 23:10:13.023 [main]  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+[INFO ] 2021-11-26 23:10:13.112 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/profile/api/latest'
+[INFO ] 2021-11-26 23:10:13.113 [main]  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 2021-11-26 23:10:13.129 [main]  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 2021-11-26 23:10:13.172 [main]  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 2021-11-26 23:10:13.301 [main]  c.j.p.UserprofileApplication - Started UserprofileApplication in 4.88 seconds (JVM running for 5.33)
+[INFO ] 2021-11-26 23:10:13.339 [main]  c.j.p.UserprofileApplication - >>>>>>>>>>>>>>>>>>>> Application is running
+[INFO ] 2021-11-26 23:10:15.312 [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2021-11-26 23:10:15.315 [SpringApplicationShutdownHook]  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2021-11-26 23:10:15.317 [SpringApplicationShutdownHook]  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.

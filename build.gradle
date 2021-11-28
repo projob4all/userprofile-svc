@@ -1,0 +1,71 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id "io.freefair.lombok" version "6.2.0"
+	//id 'com.bmuschko.docker-remote-api' version '6.7.0'
+	//id 'com.bmuschko.docker-spring-boot-application' version '6.7.0'
+}
+
+jar {
+    version =  '1.0.0'
+}
+
+
+group = 'com.job4all'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.spring.io/snapshot')
+    }
+
+    maven {
+        url = uri('https://repo.spring.io/milestone')
+    }
+
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.flywaydb:flyway-core'
+	//compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'org.postgresql:postgresql'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'net.logstash.logback', name: 'logstash-logback-encoder', version: '6.6'
+	implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.8' 
+	implementation group: 'org.springframework', name: 'spring-orm', version: '5.3.8'
+	implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.5.6'
+	implementation group: 'org.springframework.data', name: 'spring-data-commons', version: '2.5.6'
+	implementation 'com.fasterxml.jackson.core:jackson-core'
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+	implementation group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.6.0.Final'
+	implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.0.13.Final'
+	implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.32.Final'
+	implementation group: 'jakarta.persistence', name: 'jakarta.persistence-api', version: '2.2.3'
+	implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.24'
+	implementation group: 'org.glassfish', name: 'javax.el', version: '3.0.0'
+	implementation group: 'org.postgresql', name: 'postgresql', version: '9.4-1206-jdbc42'
+	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
+	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
+	implementation group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.9.0'
+	runtimeOnly 'com.h2database:h2:1.4.197'
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools:2.1.1.RELEASE'
+}
+
+//https://bmuschko.github.io/gradle-docker-plugin/ TODO
+
+test {
+	useJUnitPlatform()
+}

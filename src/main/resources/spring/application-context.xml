@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:cache="http://www.springframework.org/schema/cache"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+   	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+   	
+    <context:annotation-config />
+    <context:component-scan base-package="com.job4all.profile.candidate.controller, 
+    									  com.job4all.profile.candidate.services,
+    									  com.job4all.filter,
+    									  com.job4all.profile.exception" />
+    
+    <!--  
+    <mvc:cors>
+    	<mvc:mapping path="/**" 
+    	allowed-origins="*" 
+    	allowed-headers="Authorization,Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers"
+    	allow-credentials="true"
+    	allowed-methods="*"
+    	max-age="3600" />
+	</mvc:cors>
+	-->
+	
+	<mvc:annotation-driven/>
+	<context:property-placeholder location="classpath*:#{systemEnvironment['ENV']?:'local'}/*.properties" ignore-unresolvable="false" />
+	
+	<!-- PG Connection and Connection Pooling -->
+    <!-- import resource="spring-db-pool.xml"/-->
+    <!-- import resource="spring-pg.xml" /-->
+    <!-- import resource="transport-beans.xml"/-->
+	<import resource="transport-beans.xml"/>
+</beans>
