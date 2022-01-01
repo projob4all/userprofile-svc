@@ -16,9 +16,19 @@ pipeline {
             }
         }
         
-        stage('Build Docker image') {
+        stage('Build && Push Docker image') {
             steps {
-                sh './gradlew docker'
+                container('kaniko'){
+                	script{
+                		sh '/kaniko/executor \
+                				--context=git://https://github.com/projob4all/userprofile-svc.git \
+                				--destination=svelytskyy/job4all/userprofile-svc:1.0.0 \
+                				--insecure \
+                				--skip-tls-verify \
+                				-v=debug'
+                			
+                	}
+                }
             }
         }
         stage('Push Docker image') {
